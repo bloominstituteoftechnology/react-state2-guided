@@ -29,5 +29,8 @@ export function toggleDisplayCompleteds() {
 }
 
 export function toggleCompleted(id) {
-  
+  return {
+    type: types.TOGGLE_COMPLETED,
+    payload: id,
+  }
 }
