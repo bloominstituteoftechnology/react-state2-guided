@@ -138,7 +138,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
   - 4.3 - __Combined reducer__
 
     ```js
-    // state/reducers.js
+    // state/reducer.js
     import { combineReducers } from 'redux'
     import * as types from './action-types'
 
