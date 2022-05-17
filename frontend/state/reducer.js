@@ -28,9 +28,11 @@ function todos(todosState = initialTodos, action) {
   }
 }
 
-const initialForm = { name: 'aa', anotherInput: '' }
+const initialForm = { name: '', anotherInput: '' }
 function form(formState = initialForm, action) {
   switch (action.type) {
+    case types.ADD_TODO:
+      return initialForm
     case types.INPUT_CHANGE: {
       const { name, value} = action.payload
       return { ...formState, [name]: value }
