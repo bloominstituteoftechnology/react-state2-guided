@@ -135,7 +135,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     }
     ```
 
-  - 4.3 - __Combined reducers__
+  - 4.3 - __Combined reducer__
 
     ```js
     // state/reducers.js
