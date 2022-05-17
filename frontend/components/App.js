@@ -9,6 +9,7 @@ function App(props) {
   // via props, we can access each slice of state
   // and via props, we access each action creator
   const onSubmit = () => {
+    props.addTodo()
   }
   const toggleShouldShow = () => {
   }
