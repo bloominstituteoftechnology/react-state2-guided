@@ -12,6 +12,14 @@ import { legacy_createStore, compose } from 'redux'
 // action types
 const INCREMENT = 'INCREMENT'
 
+// an action creator (don't forget to export)
+export function increment(amount) {
+  return {
+    type: INCREMENT,
+    payload: amount,
+  }
+}
+
 // dummy combined reducer
 const initialState = { count: 0 }
 function reducer(state = initialState, action) {
