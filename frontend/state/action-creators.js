@@ -14,3 +14,6 @@ export function changeInput({ name, value }) {
   }
 }
 
+export function addTodo(todoName) {
+
+}
