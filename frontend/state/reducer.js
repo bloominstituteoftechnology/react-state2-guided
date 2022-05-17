@@ -3,7 +3,9 @@ import * as types from './action-types'
 
 function count(countState = 0, action) {
   switch(action.type) {
-
+    case types.INCREMENT: {
+      return 
+    }
     default:
       return countState
   }
