@@ -28,7 +28,8 @@ const initialForm = { name: 'aa', anotherInput: '' }
 function form(formState = initialForm, action) {
   switch (action.type) {
     case types.INPUT_CHANGE: {
-
+      const { name, value} = action.payload
+      return { ...formState, [name]: value }
     }
     default:
       return formState
