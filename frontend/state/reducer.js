@@ -22,8 +22,11 @@ function todos(todosState = initialTodos, action) {
 }
 
 const initialForm = { name: '' }
-function form(formState = inti) {
-
+function form(formState = initialForm, action) {
+  switch(action.type) {
+    default:
+      return formState
+  }
 }
 
 export default combineReducers({
