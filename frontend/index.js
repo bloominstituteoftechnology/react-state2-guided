@@ -16,7 +16,7 @@ function reducer(state = initialState, action) {
 }
 
 // let's spin up the redux store
-// with devtools support
+// with devtools support. BOILERPLATE!!!
 let store
 export const resetStore = () => {
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
