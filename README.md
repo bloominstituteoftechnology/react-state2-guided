@@ -155,7 +155,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     }
 
     export default combineReducers({
-      count,
+      count, // each reducer now only a slice of App state
     })
     ```
 
