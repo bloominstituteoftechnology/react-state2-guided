@@ -7,6 +7,8 @@ export function increment(amount) {
   }
 }
 
-export function changeInput({  }) {
-  
+export function changeInput({ name, value }) {
+  return {
+    type: types.
+  }
 }
