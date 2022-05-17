@@ -26,7 +26,7 @@ function App(props) {
       <Form
         onSubmit={onSubmit}
         onChange={props.changeInput}
-        toggleShouldShow={toggleShouldShow}
+        toggleShouldShow={props.toggleDisplayCompleteds}
         displayCompleteds={props.displayCompleteds}
         disabled={!props.form.name.length}
         values={props.form}
