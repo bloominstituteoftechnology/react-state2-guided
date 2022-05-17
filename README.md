@@ -111,14 +111,14 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 
 - 🔥 STEP 4 - See it work! Then split the state machinery into separate files:
 
-  - 4.1 - Action types:
+  - 4.1 - __Action types__
 
     ```js
     // state/action-types.js
     export const INCREMENT = 'INCREMENT'
     ```
 
-  - 4.2 - Action creators:
+  - 4.2 - __Action creators__
 
     ```js
     // state/action-creators.js
@@ -132,7 +132,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     }
     ```
 
-  - 4.3 - Combined reducers:
+  - 4.3 - __Combined reducers__
 
     ```js
     // state/reducers.js
@@ -141,6 +141,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 
     const initialCount = 0
     function count(countState = initialCount, action) {
+      // note how a reducer just tracks one specific slice
       switch (action.type) {
         case types.INCREMENT: {
           return countState + action.payload
