@@ -11,8 +11,6 @@ function App(props) {
   const onSubmit = () => {
     props.addTodo(props.form.name)
   }
-  const toggleShouldShow = () => {
-  }
   const toggleStatus = id => () => {
   }
   return (

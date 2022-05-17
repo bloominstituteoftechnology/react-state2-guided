@@ -44,7 +44,8 @@ function form(formState = initialForm, action) {
 
 function displayCompleteds(displayCompletedsState = true, action) {
   switch (action.type) {
-    case types.TOGGLE_DISPLAY_COMPLETEDS
+    case types.TOGGLE_DISPLAY_COMPLETEDS:
+      return !displayCompletedsState
     default:
       return displayCompletedsState
   }
