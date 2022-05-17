@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
-import { getId } from '../utils/helpers'
-
+// REDUX related imports
 import { connect } from 'react-redux' // utility to "connect"
 import * as actions from '../state/action-creators'
 
