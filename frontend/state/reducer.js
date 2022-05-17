@@ -33,7 +33,10 @@ function form(formState = initialForm, action) {
 }
 
 function displayCompleteds(displayCompletedsState = true, action) {
-  
+  switch (action.type) {
+    default:
+      return displayCompletedsState
+  }
 }
 
 export default combineReducers({
@@ -42,4 +45,5 @@ export default combineReducers({
   count,
   todos,
   form,
+  displayCompleteds,
 })
