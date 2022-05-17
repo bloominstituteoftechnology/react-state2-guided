@@ -90,7 +90,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     }
     ```
 
-- 🔥 STEP 3 - Go to a subcomponent:
+- 🔥 STEP 3 - Go to a subcomponent you wish to "connect" to application state:
   - 3.1 - Import `connect` from `react-redux`, and the `increment` action creator:
 
     ```js
@@ -144,7 +144,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 
     const initialCount = 0
     function count(countState = initialCount, action) {
-      // note how a reducer just tracks one specific slice
+      // note how a reducer just tracks one specific slice now
       switch (action.type) {
         case types.INCREMENT: {
           return countState + action.payload
@@ -155,7 +155,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     }
 
     export default combineReducers({
-      count, // each reducer now only a slice of App state
+      count, // each reducer now only a slice of application state
     })
     ```
 
