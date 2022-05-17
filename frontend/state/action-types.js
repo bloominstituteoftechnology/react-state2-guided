@@ -1,2 +1,2 @@
 // put your action types here
-const INCREMENT = 'INCREMENT'
+export const INCREMENT = 'INCREMENT'
