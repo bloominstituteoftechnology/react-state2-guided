@@ -8,9 +8,6 @@ import * as actions from '../state/action-creators'
 function App(props) {
   // via props, we can access each slice of state
   // and via props, we access each action creator
-  const onChange = ({ name, value }) => {
-    
-  }
   const onSubmit = () => {
   }
   const toggleShouldShow = () => {
@@ -29,7 +26,7 @@ function App(props) {
       />
       <Form
         onSubmit={onSubmit}
-        onChange={onChange}
+        onChange={props.changeInput}
         toggleShouldShow={toggleShouldShow}
         displayCompleteds={props.displayCompleteds}
         disabled={!props.form.name.length}
