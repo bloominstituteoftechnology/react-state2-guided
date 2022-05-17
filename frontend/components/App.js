@@ -5,11 +5,7 @@ import TodoList from './TodoList'
 import { connect } from 'react-redux' // utility to "connect"
 import * as actions from '../state/action-creators'
 
-const initialForm = {
-  name: '',
-}
 const initialState = {
-  form: initialForm,
   displayCompleteds: true,
 }
 
