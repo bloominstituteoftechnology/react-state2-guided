@@ -43,7 +43,6 @@ function form(formState = initialForm, action) {
 }
 
 function displayCompleteds(displayCompletedsState = true, action) {
-  debugger
   switch (action.type) {
     case types.TOGGLE_DISPLAY_COMPLETEDS:
       return !displayCompletedsState
