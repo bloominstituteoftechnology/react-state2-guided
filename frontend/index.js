@@ -9,7 +9,7 @@ import './styles/styles.css'
 import { Provider } from 'react-redux'
 import { legacy_createStore, compose } from 'redux'
 
-// dummy reducer
+// dummy combined reducer
 const initialState = { count: 0 }
 function reducer(state = initialState, action) {
   return state
