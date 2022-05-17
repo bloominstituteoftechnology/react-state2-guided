@@ -6,17 +6,11 @@ import { getId } from '../utils/helpers'
 import { connect } from 'react-redux' // utility to "connect"
 import * as actions from '../state/action-creators'
 
-const initialTodos = [
-  { id: getId(), name: "Walk the dog", completed: false },
-  { id: getId(), name: "Learn React", completed: true },
-  { id: getId(), name: "Have fun", completed: false },
-]
 const initialForm = {
   name: '',
 }
 const initialState = {
   form: initialForm,
-  todos: initialTodos,
   displayCompleteds: true,
 }
 
