@@ -3,6 +3,9 @@ import Form from './Form'
 import TodoList from './TodoList'
 import { getId } from '../utils/helpers'
 
+import { connect } from 'react-redux' // utility to "connect"
+import { increment } from '../index' // action creator
+
 const initialTodos = [
   { id: getId(), name: "Walk the dog", completed: false },
   { id: getId(), name: "Learn React", completed: true },
