@@ -73,4 +73,4 @@ function App(props) {
   )
 }
 
-export default connect(st => st)
+export default connect(st => st, {increment})(App)
