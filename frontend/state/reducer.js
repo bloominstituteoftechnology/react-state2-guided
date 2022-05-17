@@ -21,7 +21,7 @@ function todos(todosState = initialTodos, action) {
   switch (action.type) {
     case types.ADD_TODO: {
       const newTodo = action.payload
-      return newTodo
+      return {}
     }
     default:
       return todosState
