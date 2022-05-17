@@ -24,11 +24,11 @@ function todos(todosState = initialTodos, action) {
   }
 }
 
-const initialForm = { name: '', anotherInput: '' }
+const initialForm = { name: 'aa', anotherInput: '' }
 function form(formState = initialForm, action) {
   switch (action.type) {
     case types.INPUT_CHANGE:
-      return ???
+      return 
     default:
       return formState
   }
