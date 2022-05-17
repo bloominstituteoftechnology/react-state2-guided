@@ -4,8 +4,8 @@
 
 - Node 16.x
 - NPM 8.x (update NPM executing `npm i -g npm`)
-- Postman (download the desktop version [here](https://www.postman.com/downloads/))
 - Chrome >= 100.x
+- Redux Devtools extension for Chrome
 
 Other browser/Node/NPM configurations might work but haven't been tested.
 
@@ -16,24 +16,162 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 - Visit your app by navigating to `http://localhost:3000` with Chrome.
 - Reset to the instructor's remote branch executing `npm run ketchup`.
 
-## Endpoints
+## Wiring Redux
 
-The following endpoints exist in this project:
+- 🔥 STEP 1 - Install `redux` and `react-redux`
+- 🔥 STEP 2 - At the top of the app:
+  - 2.1 - Import the needed dependencies:
 
-- `GET http://localhost:9000/api/todos`
-  1. Expects no payload
-  2. Makes no changes on the server
-  3. responds with `200 OK` and a payload with all the todos
-- `POST http://localhost:9000/api/todos`
-  1. Expects a payload with `name` (string) and optional `completed` (boolean)
-  2. Creates a new todo on the server
-  3. responds with `201 Created` and a payload with the new todo
-- `PATCH http://localhost:9000/api/todos/:id`
-  1. Expects no payload
-  2. Flips the `completed` property on the todo with the id provided in the URL
-  3. Responds with `200 OK` and the updated todo
+    ```js
+    import { Provider } from 'react-redux'
+    import { legacy_createStore, compose } from 'redux'
+    ```
 
-The API will make other responses if the requests are defective:
+  - 2.2 - Build a dummy reducer just for wiring the app:
 
-- `422 Unprocessable Entity` when a required payload is missing or incorrect
-- `404 Not Found` when the requested todo does not exist, or when the URL is incorrect
+    ```js
+    const initialState = { count: 0 }
+    function reducer(state = initialState, action) {
+      return state
+    }
+    ```
+
+  - 2.3 - Build a store that works with Redux Devtools extension:
+
+    ```js
+    let store
+    export const resetStore = () => {
+      const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+      store = legacy_createStore(reducer, composeEnhancers())
+    }
+    resetStore()
+    ```
+
+  - 2.4 - Wrap the application witht the `Provider`:
+
+    ```js
+    root.render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+    ```
+
+  - 2.5 - Create an `INCREMENT` action type:
+
+    ```JS
+    const INCREMENT = 'INCREMENT'
+    ```
+
+  - 2.6 - Create an `increment` action creator function:
+
+    ```js
+    export function increment(amount) {
+      return {
+        type: INCREMENT,
+        payload: amount,
+      }
+    }
+    ```
+
+  - 2.7 - Edit the reducer to support the `INCREMENT` action type:
+
+    ```js
+    const initialState = { count: 0 }
+    function reducer(state = initialState, action) {
+      switch (action.type) {
+        case INCREMENT: {
+          return { ...state, count: state.count + action.payload }
+        }
+      }
+    }
+    ```
+
+- 🔥 STEP 3 - Go to a subcomponent:
+  - 3.1 - Import `connect` from `react-redux`, and the `increment` action creator:
+
+    ```js
+    import { connect } from 'react-redux'
+    import { increment } from '../index' // path might be different
+    ```
+
+  - 3.2 - Connect the component:
+
+    ```js
+    export default connect(st => st, { increment })(App) // if connecting App
+    ```
+
+  - 3.3 - Render the count, and a button to increment:
+
+    ```js
+      // note how both state and the action creator ARRIVE VIA PROPS
+      <span>{props.count}</span>
+      <button onClick={evt => props.increment(3)}>inc</button>
+    ```
+
+- 🔥 STEP 4 - See it work! Then split the state machinery into separate files:
+
+  - 4.1 - Action types:
+
+    ```js
+    // state/action-types.js
+    export const INCREMENT = 'INCREMENT'
+    ```
+
+  - 4.2 - Action creators:
+
+    ```js
+    // state/action-creators.js
+    import * as types from './action-types'
+
+    export function increment(amount) {
+      return {
+        type: types.INCREMENT,
+        payload: amount,
+      }
+    }
+    ```
+
+  - 4.3 - Combined reducers:
+
+    ```js
+    // state/reducers.js
+    import { combineReducers } from 'redux'
+    import * as types from './action-types'
+
+    const initialCount = 0
+    function count(countState = initialCount, action) {
+      switch (action.type) {
+        case types.INCREMENT: {
+          return countState + action.payload
+        }
+        default:
+          return countState
+      }
+    }
+
+    export default combineReducers({
+      count,
+    })
+    ```
+
+  - 4.4 - Fix the imports inside the top of the app:
+
+    ```js
+    import { Provider } from 'react-redux'
+    import { legacy_createStore, compose } from 'redux'
+    import reducer from './state/reducer' // this
+
+    let store
+    export const resetStore = () => {
+      const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+      store = legacy_createStore(reducer, composeEnhancers())
+    }
+    resetStore()
+    ```
+
+  - 4.5 - Fix the imports inside the subcomponent
+
+    ```js
+    import { increment } from '../state/action-creators'
+    ```
