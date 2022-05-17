@@ -19,10 +19,11 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 ## Wiring Redux
 
 - 🔥 STEP 1 - Install `redux` and `react-redux`
-- 🔥 STEP 2 - At the top of the app:
+- 🔥 STEP 2 - At the top-level component of the app:
   - 2.1 - Import the needed dependencies:
 
     ```js
+    // frontend/index.js
     import { Provider } from 'react-redux'
     import { legacy_createStore, compose } from 'redux'
     ```
