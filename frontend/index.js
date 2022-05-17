@@ -23,10 +23,13 @@ export function increment(amount) {
 // dummy combined reducer
 const initialState = { count: 0 }
 function reducer(state = initialState, action) {
-  if (action.type === INCREMENT) {
-    return
+  switch(action.type) {
+    case INCREMENT: {
+      //
+    }
+    default:
+      return state
   }
-  return state
 }
 
 // let's spin up the redux store
