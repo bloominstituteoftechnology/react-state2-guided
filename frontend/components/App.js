@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
-
-let id = 0
-const getId = () => ++id
+import { getId } from '../utils/helpers'
 
 const initialTodos = [
   { id: getId(), name: "Walk the dog", completed: false },
