@@ -8,6 +8,7 @@ import './styles/styles.css'
 // redux-related imports
 import { Provider } from 'react-redux'
 import { legacy_createStore, compose } from 'redux'
+import reducer from './state/reducer'
 
 // let's spin up the redux store
 // with devtools support. BOILERPLATE!!!
