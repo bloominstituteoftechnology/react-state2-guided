@@ -27,4 +27,10 @@ resetStore()
 const container = document.getElementById('root')
 const root = createRoot(container)
 
-root.render(<App />)
+// wrap the whole react tree with the Provider
+// don't forget to supply the store as a "store" props
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
