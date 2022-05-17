@@ -17,7 +17,7 @@ function foo(fooState = 'foobar') {
 }
 
 const initialTodos = [
-  { id: getId(), name: "Walk the dog", completed: false },
+  { id: getId(), name: "Walk the dog NOW!!!!", completed: false },
   { id: getId(), name: "Learn React", completed: true },
   { id: getId(), name: "Have fun", completed: false },
 ]
