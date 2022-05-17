@@ -12,10 +12,6 @@ function count(countState = 0, action) {
   }
 }
 
-function foo(fooState = 'foobar') {
-  return fooState
-}
-
 const initialTodos = [
   { id: getId(), name: "Walk the dog NOW!!!!", completed: false },
   { id: getId(), name: "Learn React", completed: true },
@@ -25,10 +21,14 @@ function todos(todosState = initialTodos, action) {
   return todosState
 }
 
+function form() {
+
+}
+
 export default combineReducers({
   // here go your reducers combined
   // into one super big reducer
   count,
   todos,
-  foo,
+  form,
 })
