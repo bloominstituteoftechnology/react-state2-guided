@@ -15,6 +15,15 @@ function reducer(state = initialState, action) {
   return state
 }
 
+// let's spin up the redux store
+// with devtools support
+let store
+export const resetStore = () => {
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+  store = legacy_createStore(reducer, composeEnhancers())
+}
+resetStore()
+
 const container = document.getElementById('root')
 const root = createRoot(container)
 
