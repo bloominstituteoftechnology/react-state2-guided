@@ -9,18 +9,6 @@ import './styles/styles.css'
 import { Provider } from 'react-redux'
 import { legacy_createStore, compose } from 'redux'
 
-// dummy combined reducer
-const initialState = { count: 0 }
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case INCREMENT: {
-      return { ...state, count: state.count + action.payload }
-    }
-    default:
-      return state
-  }
-}
-
 // let's spin up the redux store
 // with devtools support. BOILERPLATE!!!
 let store
