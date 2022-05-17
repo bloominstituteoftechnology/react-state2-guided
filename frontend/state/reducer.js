@@ -15,8 +15,13 @@ function foo(fooState = 'foobar') {
   return fooState
 }
 
-function todos(todosState = ) {
-
+const initialTodos = [
+  { id: getId(), name: "Walk the dog", completed: false },
+  { id: getId(), name: "Learn React", completed: true },
+  { id: getId(), name: "Have fun", completed: false },
+]
+function todos(todosState = initialTodos, action) {
+  return todosState
 }
 
 export default combineReducers({
