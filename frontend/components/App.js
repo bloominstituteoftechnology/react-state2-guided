@@ -37,8 +37,8 @@ function App(props) {
         onChange={onChange}
         toggleShouldShow={toggleShouldShow}
         displayCompleteds={state.displayCompleteds}
-        disabled={!state.form.name.length}
-        values={state.form}
+        disabled={!props.form.name.length}
+        values={props.form}
       />
     </div>
   )
