@@ -11,8 +11,13 @@ function count(countState = 0, action) {
   }
 }
 
+function foo(fooState = 'foobar') {
+  return fooState
+}
+
 export default combineReducers({
   // here go your reducers combined
   // into one super big reducer
   count,
+  foo,
 })
