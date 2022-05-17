@@ -1,19 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
 // REDUX related imports
 import { connect } from 'react-redux' // utility to "connect"
 import * as actions from '../state/action-creators'
 
-const initialState = {
-  displayCompleteds: true,
-}
-
 function App(props) {
   // via props, we can access "count"
   // and via props, we access "increment"
-  const [state, setState] = useState(initialState)
-
   const onChange = ({ name, value }) => {
   }
   const onSubmit = () => {
