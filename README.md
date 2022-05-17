@@ -27,7 +27,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     import { legacy_createStore, compose } from 'redux'
     ```
 
-  - 2.2 - Build a dummy reducer just for wiring the app:
+  - 2.2 - Build a dummy combined reducer just for wiring the app:
 
     ```js
     const initialState = { count: 0 }
@@ -47,7 +47,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
     resetStore()
     ```
 
-  - 2.4 - Wrap the application witht the `Provider`:
+  - 2.4 - Wrap the application with the `Provider`:
 
     ```js
     root.render(
@@ -83,6 +83,8 @@ Other browser/Node/NPM configurations might work but haven't been tested.
         case INCREMENT: {
           return { ...state, count: state.count + action.payload }
         }
+        default:
+          return state
       }
     }
     ```
