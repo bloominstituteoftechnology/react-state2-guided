@@ -27,8 +27,9 @@ function todos(todosState = initialTodos, action) {
 const initialForm = { name: 'aa', anotherInput: '' }
 function form(formState = initialForm, action) {
   switch (action.type) {
-    case types.INPUT_CHANGE:
-      return { ...formState, []:  }
+    case types.INPUT_CHANGE: {
+
+    }
     default:
       return formState
   }
