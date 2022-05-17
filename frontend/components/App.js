@@ -23,14 +23,14 @@ function App(props) {
       <button onClick={evt => props.increment(5)}>inc</button>
       <TodoList
         todos={props.todos}
-        displayCompleteds={state.displayCompleteds}
+        displayCompleteds={props.displayCompleteds}
         toggleStatus={toggleStatus}
       />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}
         toggleShouldShow={toggleShouldShow}
-        displayCompleteds={state.displayCompleteds}
+        displayCompleteds={props.displayCompleteds}
         disabled={!props.form.name.length}
         values={props.form}
       />
