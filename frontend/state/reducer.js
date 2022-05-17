@@ -21,7 +21,7 @@ function todos(todosState = initialTodos, action) {
   return todosState
 }
 
-const initialForm = { name: '' }
+const initialForm = { name: 'this is a silly value' }
 function form(formState = initialForm, action) {
   switch(action.type) {
     default:
