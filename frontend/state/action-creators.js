@@ -18,6 +18,6 @@ export function changeInput({ name, value }) {
 export function addTodo(todoName) {
   return {
     type: types.ADD_TODO,
-    payload: { name: todoName, completed: false, id }
+    payload: { name: todoName, completed: false, id: getId() }
   }
 }
