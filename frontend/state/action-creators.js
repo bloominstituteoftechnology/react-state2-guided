@@ -6,3 +6,7 @@ export function increment(amount) {
     payload: amount,
   }
 }
+
+export function changeInput({  }) {
+  
+}

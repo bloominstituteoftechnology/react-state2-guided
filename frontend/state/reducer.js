@@ -24,7 +24,7 @@ function todos(todosState = initialTodos, action) {
   }
 }
 
-const initialForm = { name: '' }
+const initialForm = { name: '', anotherInput: '' }
 function form(formState = initialForm, action) {
   switch (action.type) {
     default:
