@@ -4,7 +4,8 @@ import TodoList from './TodoList'
 import { getId } from '../utils/helpers'
 
 import { connect } from 'react-redux' // utility to "connect"
-import { increment } from '../index' // action creator
+// import { increment } from '../state/action-creators' // action creator
+import * as actions from '../state/action-creators'
 
 const initialTodos = [
   { id: getId(), name: "Walk the dog", completed: false },
