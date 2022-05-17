@@ -27,3 +27,7 @@ export function toggleDisplayCompleteds() {
     type: types.TOGGLE_DISPLAY_COMPLETEDS
   }
 }
+
+export function toggleCompleted(id) {
+  
+}
