@@ -1,4 +1,4 @@
-# Advanced State Management Guided Project PART 2
+# Advanced State Management GP PART 2
 
 ## Requirements
 
