@@ -23,7 +23,7 @@ function todos(todosState = initialTodos, action) {
       const id = action.payload
       return todosState.map(td => {
         if (td.id !== id) return td
-        return { ...td, completed: }
+        return { ...td, completed: !td.completed }
       })
     }
     case types.ADD_TODO: {
@@ -41,7 +41,7 @@ function form(formState = initialForm, action) {
     case types.ADD_TODO:
       return initialForm
     case types.INPUT_CHANGE: {
-      const { name, value} = action.payload
+      const { name, value } = action.payload
       return { ...formState, [name]: value }
     }
     default:
