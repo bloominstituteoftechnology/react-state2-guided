@@ -22,4 +22,8 @@ export function addTodo(todoName) {
   }
 }
 
-export function t
+export function toggleDisplayCompleteds() {
+  return {
+    type: types.TOGGLE_DISPLAY_COMPLETEDS
+  }
+}
