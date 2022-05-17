@@ -9,9 +9,6 @@ import './styles/styles.css'
 import { Provider } from 'react-redux'
 import { legacy_createStore, compose } from 'redux'
 
-// action types
-const INCREMENT = 'INCREMENT'
-
 // an action creator (don't forget to export)
 export function increment(amount) {
   return {
