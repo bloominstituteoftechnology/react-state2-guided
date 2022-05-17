@@ -22,7 +22,8 @@ function todos(todosState = initialTodos, action) {
     case types.TOGGLE_COMPLETED: {
       const id = action.payload
       return todosState.map(td => {
-        
+        if (td.id !== id) return td
+        return { ...td, completed: }
       })
     }
     case types.ADD_TODO: {
