@@ -21,6 +21,8 @@ const initialState = {
 }
 
 function App(props) {
+  // via props, we can access "count"
+  // and via props, we access "increment"
   const [state, setState] = useState(initialState)
 
   const onChange = ({ name, value }) => {
@@ -56,6 +58,7 @@ function App(props) {
   return (
     <div>
       <h1>Todo App</h1>
+      <span>{}</span>
       <TodoList
         todos={state.todos}
         displayCompleteds={state.displayCompleteds}
