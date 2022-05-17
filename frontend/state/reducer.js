@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux'
 import * as types from './action-types'
 
-const 
-function count(countState = ) {
-
+function count(countState = 0, action) {
+  
 }
 
 export default combineReducers({
