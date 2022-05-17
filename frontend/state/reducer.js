@@ -18,10 +18,13 @@ const initialTodos = [
   { id: getId(), name: "Have fun", completed: false },
 ]
 function todos(todosState = initialTodos, action) {
-  return todosState
+  switch(action.type) {
+    default:
+      return todosState
+  }
 }
 
-const initialForm = { name: 'this is a silly value' }
+const initialForm = { name: '' }
 function form(formState = initialForm, action) {
   switch(action.type) {
     default:
