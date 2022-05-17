@@ -21,7 +21,9 @@ function todos(todosState = initialTodos, action) {
   switch (action.type) {
     case types.TOGGLE_COMPLETED: {
       const id = action.payload
-      return 
+      return todosState.map(td => {
+        
+      })
     }
     case types.ADD_TODO: {
       const newTodo = action.payload
