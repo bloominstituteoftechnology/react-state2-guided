@@ -59,6 +59,7 @@ function App(props) {
     <div>
       <h1>Todo App</h1>
       <span>{props.count}</span>
+      <button onClick={evt => }>inc</button>
       <TodoList
         todos={state.todos}
         displayCompleteds={state.displayCompleteds}
