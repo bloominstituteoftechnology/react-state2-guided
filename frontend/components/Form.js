@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   onChange = evt => {
     const { name, value } = evt.target
     this.props.onChange({ name, value })
@@ -36,3 +36,5 @@ export default class Form extends React.Component {
     )
   }
 }
+
+export default Form

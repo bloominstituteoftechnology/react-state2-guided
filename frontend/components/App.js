@@ -19,7 +19,7 @@ const initialState = {
   displayCompleteds: true,
 }
 
-export default function App() {
+function App(props) {
   const [state, setState] = useState(initialState)
 
   const onChange = ({ name, value }) => {
@@ -71,3 +71,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App

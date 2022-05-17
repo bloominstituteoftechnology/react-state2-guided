@@ -1,7 +1,7 @@
 import React from 'react'
 import Todo from './Todo'
 
-export default class TodoList extends React.Component {
+class TodoList extends React.Component {
   render() {
     const { todos, displayCompleteds, toggleStatus } = this.props
     return (
@@ -23,3 +23,5 @@ export default class TodoList extends React.Component {
     )
   }
 }
+
+export default TodoList
