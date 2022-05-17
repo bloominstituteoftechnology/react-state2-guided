@@ -3,7 +3,7 @@ import * as types from './action-types'
 import { getId } from '../utils/helpers'
 
 function count(countState = 0, action) {
-  switch(action.type) {
+  switch (action.type) {
     case types.INCREMENT: {
       return countState + action.payload
     }
@@ -18,7 +18,7 @@ const initialTodos = [
   { id: getId(), name: "Have fun", completed: false },
 ]
 function todos(todosState = initialTodos, action) {
-  switch(action.type) {
+  switch (action.type) {
     default:
       return todosState
   }
@@ -26,10 +26,14 @@ function todos(todosState = initialTodos, action) {
 
 const initialForm = { name: '' }
 function form(formState = initialForm, action) {
-  switch(action.type) {
+  switch (action.type) {
     default:
       return formState
   }
+}
+
+function displayCompleteds(displayCompletedsState = true, action) {
+  
 }
 
 export default combineReducers({
