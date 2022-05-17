@@ -23,6 +23,9 @@ export function increment(amount) {
 // dummy combined reducer
 const initialState = { count: 0 }
 function reducer(state = initialState, action) {
+  if (action.type === INCREMENT) {
+    return
+  }
   return state
 }
 
