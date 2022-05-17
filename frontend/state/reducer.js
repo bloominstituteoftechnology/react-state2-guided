@@ -21,7 +21,8 @@ function todos(todosState = initialTodos, action) {
   return todosState
 }
 
-function form() {
+const initialForm = { name: '' }
+function form(formState = inti) {
 
 }
 
