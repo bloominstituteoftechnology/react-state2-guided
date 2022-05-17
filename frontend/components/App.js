@@ -59,7 +59,7 @@ function App(props) {
     <div>
       <h1>Todo App</h1>
       <span>{props.count}</span>
-      <button onClick={evt => }>inc</button>
+      <button onClick={evt => props.increment(5)}>inc</button>
       <TodoList
         todos={state.todos}
         displayCompleteds={state.displayCompleteds}
@@ -79,4 +79,4 @@ function App(props) {
 
 // by connecting, each slice of state
 // and each A.C. arrives into the component via props
-export default connect(st => st, {increment})(App)
+export default connect(st => st, { increment })(App)
