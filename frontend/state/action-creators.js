@@ -9,6 +9,7 @@ export function increment(amount) {
 
 export function changeInput({ name, value }) {
   return {
-    type: types.
+    type: types.INPUT_CHANGE,
+    payload: { name, value }
   }
 }
