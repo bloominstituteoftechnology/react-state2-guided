@@ -15,6 +15,10 @@ function foo(fooState = 'foobar') {
   return fooState
 }
 
+function todos(todosState = ) {
+
+}
+
 export default combineReducers({
   // here go your reducers combined
   // into one super big reducer
