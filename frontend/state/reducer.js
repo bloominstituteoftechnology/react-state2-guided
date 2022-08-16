@@ -4,7 +4,7 @@ import * as types from './action-types'
 
 const initialForm = { name: '' }
 function form(state = initialForm, action) {
-  return state // just the form
+  return state // just the form object
 }
 
 const initialTodos = [
@@ -21,6 +21,5 @@ function displayCompleteds(state = true, action) {
 }
 
 export default combineReducers({
-  // here go your reducers combined
-  // into one super big reducer
+  
 })
