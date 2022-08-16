@@ -23,7 +23,7 @@ function todos(state = initialTodos, action) {
   switch (action.type) {
     case types.ADD_NEW_TODO: {
       const newTodo = action.payload
-      return state.concat(action.payload)
+      return state.concat(newTodo)
     }
     default:
       return state
