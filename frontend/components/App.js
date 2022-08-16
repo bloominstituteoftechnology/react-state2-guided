@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 function App(props) {
   const onChange = ({ name, value }) => {
-
+    props.changeInput({ name, value })
   }
   const onSubmit = () => {
 
