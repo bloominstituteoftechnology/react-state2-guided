@@ -6,6 +6,5 @@ export function changeInput({ name, value }) {
   return { type: types.INPUT_CHANGE, payload: { name, value } }
 }
 export function addTodo(todoName) {
-  debugger
   return { type: types.ADD_NEW_TODO, payload: todoName }
 }
