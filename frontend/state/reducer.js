@@ -8,7 +8,6 @@ function form(state = initialForm, action) {
     case types.INPUT_CHANGE: {
       const { name, value } = action.payload
       return { ...state, [name]: value }
-      // return { ...state, form: { ...state.form, [name]: value }}
     }
     default:
       return state
