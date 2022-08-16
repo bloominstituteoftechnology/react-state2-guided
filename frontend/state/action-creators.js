@@ -9,3 +9,6 @@ export function addTodo(todoName) {
   const newTodo = { id: getId(), completed: false, name: todoName }
   return { type: types.ADD_NEW_TODO, payload: newTodo }
 }
+export function toggleShouldShow() {
+  return 
+}
