@@ -40,3 +40,6 @@ function App(props) {
 // export default App
 // this is how we 'connect' a component to Redux
 export default connect(st => st)(App)
+// export default connect(st => ({
+//   todos: st.todos,
+// }))(App)
