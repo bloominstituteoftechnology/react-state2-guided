@@ -37,4 +37,5 @@ function App(props) {
   )
 }
 
-export default connect()(App)
+// export default App
+export default connect(st => st)(App)
