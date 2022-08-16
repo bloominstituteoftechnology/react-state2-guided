@@ -4,10 +4,10 @@ import * as types from './action-types'
 
 const initialForm = { name: '' }
 function form(state = initialForm, action) {
-  switch(action.type) {
+  switch (action.type) {
     case types.INPUT_CHANGE: {
       // do stuff in that case
-      
+      const { name, value } = action.payload
     }
     default:
       return state
