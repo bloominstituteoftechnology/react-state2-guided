@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
+import { connect } from 'react-redux'
 
 function App(props) {
   const onChange = ({ name, value }) => {
