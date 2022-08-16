@@ -10,6 +10,7 @@ function form(state = initialForm, action) {
   return state // just the form
 }
 
+const initialTodos = 
 function todos (state, action) {
   return state
 }
