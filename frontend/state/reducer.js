@@ -10,7 +10,9 @@ function form(state = initialForm, action) {
   return state // just the form
 }
 
-function 
+function showCompleted (state = true, action) {
+  return state // 
+}
 
 
 export default combineReducers({
