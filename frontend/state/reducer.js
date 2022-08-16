@@ -27,6 +27,9 @@ function todos(todos = initialTodos, action) {
       const newTodo = action.payload
       return todos.concat(newTodo)
     }
+    case types.TOGGLE_COMPLETION: {
+      return
+    }
     default:
       return todos
   }
