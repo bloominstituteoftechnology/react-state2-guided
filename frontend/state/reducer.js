@@ -6,8 +6,8 @@ const initialForm = { name: '' }
 function form(state = initialForm, action) {
   switch (action.type) {
     case types.INPUT_CHANGE: {
-      // do stuff in that case
       const { name, value } = action.payload
+      return { ...state, [name]: value }
     }
     default:
       return state
