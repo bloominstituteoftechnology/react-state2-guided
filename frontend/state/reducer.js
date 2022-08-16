@@ -19,14 +19,14 @@ const initialTodos = [
   { id: getId(), name: "Learn React", completed: true },
   { id: getId(), name: "Have fun", completed: false },
 ]
-function todos(state = initialTodos, action) {
+function todos(todos = initialTodos, action) {
   switch (action.type) {
     case types.ADD_NEW_TODO: {
       const newTodo = action.payload
-      return state.concat(newTodo)
+      return todos.concat(newTodo)
     }
     default:
-      return state
+      return todos
   }
 }
 
