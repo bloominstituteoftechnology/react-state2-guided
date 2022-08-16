@@ -21,5 +21,5 @@ function displayCompleteds(state = true, action) {
 }
 
 export default combineReducers({
-  
+  form, todos, displayCompleteds
 })
