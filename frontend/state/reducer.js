@@ -11,8 +11,9 @@ function form(state = initialForm, action) {
 }
 
 function showCompleted (state = true, action) {
-  return state // 
+  return state // just the boolean
 }
+
 
 
 export default combineReducers({
