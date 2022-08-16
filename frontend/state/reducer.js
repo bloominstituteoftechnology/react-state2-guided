@@ -10,6 +10,7 @@ function form(state = initialForm, action) {
   return state // just the form
 }
 
+function 
 export default combineReducers({
   // here go your reducers combined
   // into one super big reducer
