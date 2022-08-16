@@ -30,11 +30,11 @@ function todos(todos = initialTodos, action) {
     case types.TOGGLE_COMPLETION: {
       const id = action.payload
       return todos.map(td => {
-        return (id === td.id) ? { ...td, completed: !td.completed } : td
-        // if (id === td.id) {
-        //   return { ...td, completed: !td.completed }
-        // }
-        // return td
+        // return (id === td.id) ? { ...td, completed: !td.completed } : td
+        if (id === td.id) {
+          return { ...td, completed: !td.completed }
+        }
+        return td
       })
     }
     default:
