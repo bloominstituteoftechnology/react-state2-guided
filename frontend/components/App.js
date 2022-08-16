@@ -2,6 +2,7 @@ import React from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
 import { connect } from 'react-redux'
+import * as actions from '../state/action-creators'
 
 function App(props) {
   const onChange = ({ name, value }) => {
