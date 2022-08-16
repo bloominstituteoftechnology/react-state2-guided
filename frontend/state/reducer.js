@@ -20,7 +20,13 @@ const initialTodos = [
   { id: getId(), name: "Have fun", completed: false },
 ]
 function todos(state = initialTodos, action) {
-  return state // just the array
+  switch (action.type) {
+    case types.ADD_NEW_TODO: {
+      //???
+    }
+    default:
+      return state
+  }
 }
 
 function displayCompleteds(state = true, action) {
