@@ -9,7 +9,7 @@ function App(props) {
     props.addTodo(props.form.name)
   }
   const toggleStatus = id => () => {
-
+    props.toggleCompleted(id)
   }
   return (
     <div>
