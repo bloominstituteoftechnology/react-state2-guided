@@ -6,6 +6,7 @@ import * as types from './action-types'
 // each reducer takes care of a single
 // slice of state
 
+
 export default combineReducers({
   // here go your reducers combined
   // into one super big reducer
