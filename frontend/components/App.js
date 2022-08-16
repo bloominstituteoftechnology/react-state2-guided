@@ -14,11 +14,7 @@ function App(props) {
   return (
     <div>
       <h1>Todo App</h1>
-      <TodoList
-        todos={props.todos}
-        displayCompleteds={props.displayCompleteds}
-        toggleStatus={toggleStatus}
-      />
+      <TodoList />
       <Form
         onSubmit={onSubmit}
         onChange={props.changeInput}
