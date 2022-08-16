@@ -4,7 +4,6 @@ import * as types from './action-types'
 
 const initialForm = { name: '' }
 function form(state = initialForm, action) {
-  debugger
   return state // just the form object
 }
 
