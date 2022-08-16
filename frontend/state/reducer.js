@@ -28,7 +28,7 @@ function todos(todos = initialTodos, action) {
       return todos.concat(newTodo)
     }
     case types.TOGGLE_COMPLETION: {
-      return
+      return todos.map()
     }
     default:
       return todos
