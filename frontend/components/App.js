@@ -5,9 +5,6 @@ import { connect } from 'react-redux'
 import * as actions from '../state/action-creators'
 
 function App(props) {
-  const onChange = ({ name, value }) => {
-    props.changeInput({ name, value })
-  }
   const onSubmit = () => {
 
   }
@@ -27,7 +24,7 @@ function App(props) {
       />
       <Form
         onSubmit={onSubmit}
-        onChange={onChange}
+        onChange={props.changeInput}
         disabled={!props.form.name.length}
         values={props.form}
       />
