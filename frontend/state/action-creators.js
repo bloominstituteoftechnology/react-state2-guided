@@ -5,3 +5,6 @@ import * as types from './action-types'
 export function changeInput({ name, value }) {
   return { type: types.INPUT_CHANGE, payload: { name, value } }
 }
+export function addTodo(todoName) {
+  // ???
+}
