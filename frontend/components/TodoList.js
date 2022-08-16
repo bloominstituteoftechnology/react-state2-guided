@@ -1,6 +1,6 @@
 import React from 'react'
 import Todo from './Todo'
-import { connect} from 'react-redux'
+import { connect } from 'react-redux'
 import * as actions from '../state/action-creators'
 
 class TodoList extends React.Component {

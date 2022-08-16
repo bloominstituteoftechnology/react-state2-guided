@@ -8,7 +8,6 @@ function App(props) {
   const onSubmit = () => {
     props.addTodo(props.form.name)
   }
-
   return (
     <div>
       <h1>Todo App</h1>
