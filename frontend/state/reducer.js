@@ -10,8 +10,12 @@ function form(state = initialForm, action) {
   return state // just the form
 }
 
-const initialTodos = 
-function todos (state, action) {
+const initialTodos = [
+  { id: getId(), name: "Walk the dog", completed: false },
+  { id: getId(), name: "Learn React", completed: true },
+  { id: getId(), name: "Have fun", completed: false },
+]
+function todos (state = initialTodos, action) {
   return state
 }
 
