@@ -4,7 +4,9 @@ import * as types from './action-types'
 
 const initialForm = { name: '' }
 function form(state = initialForm, action) {
-  return state // just the form object
+  switch(action.type) {
+    case 
+  }
 }
 
 const initialTodos = [
