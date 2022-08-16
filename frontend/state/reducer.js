@@ -6,7 +6,7 @@ import * as types from './action-types'
 // each reducer takes care of a single
 // slice of state
 const initialForm = { name: '' }
-function form(state, action) {
+function form(state = initialForm, action) {
   return state // just the form
 }
 
