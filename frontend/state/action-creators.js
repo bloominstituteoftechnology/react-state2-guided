@@ -10,5 +10,5 @@ export function addTodo(todoName) {
   return { type: types.ADD_NEW_TODO, payload: newTodo }
 }
 export function toggleShouldShow() {
-  return 
+  return { type: types. }
 }
