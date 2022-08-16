@@ -8,7 +8,7 @@ class TodoList extends React.Component {
     this.props.toggleCompleted(id)
   }
   render() {
-    const { todos, displayCompleteds, toggleStatus } = this.props
+    const { todos, displayCompleteds } = this.props
     return (
       <div id="todos">
         <h2>Todos:</h2>
@@ -18,7 +18,7 @@ class TodoList extends React.Component {
               <Todo
                 todo={td}
                 key={td.id}
-                toggleStatus={toggleStatus}
+                toggleStatus={this.toggleStatus}
               />
             )
             return acc
