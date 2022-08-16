@@ -13,15 +13,12 @@ const initialTodos = [
   { id: getId(), name: "Have fun", completed: false },
 ]
 function todos(state = initialTodos, action) {
-  return state
+  return state // just the array
 }
 
-const 
 function displayCompleteds(state = true, action) {
   return state // just the boolean
 }
-
-
 
 export default combineReducers({
   // here go your reducers combined
