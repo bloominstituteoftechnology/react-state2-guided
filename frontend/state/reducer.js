@@ -10,7 +10,11 @@ function form(state = initialForm, action) {
   return state // just the form
 }
 
-function showCompleted (state = true, action) {
+function todos (state, action) {
+  return state
+}
+
+function displayCompleteds (state = true, action) {
   return state // just the boolean
 }
 
