@@ -13,5 +13,5 @@ export function toggleShouldShow() {
   return { type: types.TOGGLE_DISPLAY_COMPLETEDS }
 }
 export function toggleCompleted(id) {
-  return { type: types.TOGGLE_COMPLETION }
+  return { type: types.TOGGLE_COMPLETION, payload: id }
 }
