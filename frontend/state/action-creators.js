@@ -12,3 +12,6 @@ export function addTodo(todoName) {
 export function toggleShouldShow() {
   return { type: types.TOGGLE_DISPLAY_COMPLETEDS }
 }
+export function toggleCompleted(id) {
+  return { type: types.}
+}
