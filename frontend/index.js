@@ -8,7 +8,7 @@ import './styles/styles.css'
 // ==================== redux-related scaffolding start ====================
 import { Provider } from 'react-redux'
 import { legacy_createStore, compose } from 'redux'
-import reducer from './state/reducer'
+import reducer from './state/reducer' // this is the combined reducer
 
 let store
 export const resetStore = () => {
