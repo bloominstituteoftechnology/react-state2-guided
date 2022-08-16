@@ -8,11 +8,8 @@ function App(props) {
   const onSubmit = () => {
     props.addTodo(props.form.name)
   }
-  const toggleShouldShow = () => {
-    props.toggleShouldShow()
-  }
   const toggleStatus = id => () => {
-    
+
   }
   return (
     <div>
@@ -28,7 +25,7 @@ function App(props) {
         disabled={!props.form.name.length}
         values={props.form}
       />
-      <button onClick={toggleShouldShow}>
+      <button onClick={props.toggleShouldShow}>
         {props.displayCompleteds ? 'Hide' : 'Show'} Completed
       </button>
     </div>
