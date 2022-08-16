@@ -3,7 +3,6 @@ import Form from './Form'
 import TodoList from './TodoList'
 
 function App(props) {
-
   const onChange = ({ name, value }) => {
 
   }
