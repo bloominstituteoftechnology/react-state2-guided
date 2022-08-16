@@ -7,6 +7,7 @@ function form(state = initialForm, action) {
   switch(action.type) {
     case types.INPUT_CHANGE: {
       // do stuff in that case
+      
     }
     default:
       return state
