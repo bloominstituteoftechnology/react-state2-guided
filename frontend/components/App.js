@@ -20,18 +20,18 @@ function App(props) {
     <div>
       <h1>Todo App</h1>
       <TodoList
-        todos={state.todos}
-        displayCompleteds={state.displayCompleteds}
+        todos={props.todos}
+        displayCompleteds={props.displayCompleteds}
         toggleStatus={toggleStatus}
       />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}
-        disabled={!state.form.name.length}
-        values={state.form}
+        disabled={!props.form.name.length}
+        values={props.form}
       />
       <button onClick={toggleShouldShow}>
-        {state.displayCompleteds ? 'Hide' : 'Show'} Completed
+        {props.displayCompleteds ? 'Hide' : 'Show'} Completed
       </button>
     </div>
   )
