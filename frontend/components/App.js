@@ -9,7 +9,7 @@ function App(props) {
     props.addTodo(props.form.name)
   }
   const toggleShouldShow = () => {
-    
+    props.toggleShouldShow()
   }
   const toggleStatus = id => () => {
 
