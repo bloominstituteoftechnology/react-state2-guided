@@ -9,6 +9,8 @@ function form(state = initialForm, action) {
       const { name, value } = action.payload
       return { ...state, [name]: value }
     }
+    case types.ADD_NEW_TODO:
+      return 
     default:
       return state
   }
