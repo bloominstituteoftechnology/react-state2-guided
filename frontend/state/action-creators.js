@@ -10,5 +10,5 @@ export function addTodo(todoName) {
   return { type: types.ADD_NEW_TODO, payload: newTodo }
 }
 export function toggleShouldShow() {
-  return { type: types. }
+  return { type: types.TOGGLE_DISPLAY_COMPLETEDS }
 }

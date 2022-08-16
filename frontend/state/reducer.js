@@ -33,7 +33,7 @@ function todos(todos = initialTodos, action) {
 }
 
 function displayCompleteds(state = true, action) {
-  return state // just the boolean
+  
 }
 
 export default combineReducers({
