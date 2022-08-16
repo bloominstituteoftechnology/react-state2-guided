@@ -2,36 +2,13 @@ import React from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
 
-const initialTodos = [
-  { id: getId(), name: "Walk the dog", completed: false },
-  { id: getId(), name: "Learn React", completed: true },
-  { id: getId(), name: "Have fun", completed: false },
-]
-const initialForm = {
-  name: '',
-}
-const initialState = {
-  form: initialForm,
-  todos: initialTodos,
-  displayCompleteds: true,
-}
-
 function App(props) {
-  const [state, setState] = useState(initialState)
 
   const onChange = ({ name, value }) => {
-    setState({ ...state, form: { [name]: value } })
+
   }
   const onSubmit = () => {
-    setState({
-      ...state,
-      form: initialForm,
-      todos: state.todos.concat({
-        id: getId(),
-        name: state.form.name,
-        completed: false,
-      }),
-    })
+
   }
   const toggleShouldShow = () => {
     setState({
