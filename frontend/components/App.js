@@ -41,6 +41,6 @@ function App(props) {
 export default connect(st => st)(App) // this brings ALL the states
 
 // export default connect(st => ({ // this brings ONLY todos and displayCompleteds
-//   theTodoList: st.todos,
+//   todos: st.todos,
 //   displayCompleteds: st.displayCompleteds,
 // }))(App)
