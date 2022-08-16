@@ -12,7 +12,7 @@ function App(props) {
     props.toggleShouldShow()
   }
   const toggleStatus = id => () => {
-
+    
   }
   return (
     <div>
