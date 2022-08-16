@@ -5,7 +5,11 @@ import * as types from './action-types'
 const initialForm = { name: '' }
 function form(state = initialForm, action) {
   switch(action.type) {
-    case 
+    case types.INPUT_CHANGE: {
+      // do stuff in that case
+    }
+    default:
+      return state
   }
 }
 
