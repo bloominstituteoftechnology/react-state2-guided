@@ -2,6 +2,9 @@ import React from 'react'
 import Todo from './Todo'
 
 class TodoList extends React.Component {
+  toggleStatus = id => () => {
+    this.props.toggleCompleted(id)
+  }
   render() {
     const { todos, displayCompleteds, toggleStatus } = this.props
     return (
@@ -24,4 +27,4 @@ class TodoList extends React.Component {
   }
 }
 
-export default TodoList
+export default connect(st => st, actions)(TodoList)

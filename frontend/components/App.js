@@ -8,9 +8,7 @@ function App(props) {
   const onSubmit = () => {
     props.addTodo(props.form.name)
   }
-  const toggleStatus = id => () => {
-    props.toggleCompleted(id)
-  }
+
   return (
     <div>
       <h1>Todo App</h1>
