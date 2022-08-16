@@ -33,7 +33,9 @@ function todos(todos = initialTodos, action) {
 }
 
 function displayCompleteds(state = true, action) {
-  
+  switch(action.type) {
+    case types
+  }
 }
 
 export default combineReducers({
