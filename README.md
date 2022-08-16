@@ -17,7 +17,7 @@ Other browser/Node/NPM configurations might work but haven't been tested.
 
 ## Setup
 
-- Install the Redux Dev Extension for Chrome.
+- Install the Redux DevTools Extension for Chrome.
 - Clone and `npm install`. DO NOT FORK! (Or the "ketchup" script won't work.)
 - Launch the project on a development server executing `npm run dev`.
 - Visit your app by navigating to `http://localhost:3000` with Chrome.
