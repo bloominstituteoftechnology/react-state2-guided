@@ -23,5 +23,9 @@ const root = createRoot(container)
 
 // todo: wrap the App in the Provider
 root.render(
-  <App />
+  <Provider>
+
+    <App />
+
+  </Provider>
 )
