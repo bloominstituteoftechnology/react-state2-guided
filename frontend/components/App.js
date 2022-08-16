@@ -6,7 +6,7 @@ import * as actions from '../state/action-creators'
 
 function App(props) {
   const onSubmit = () => {
-    props.addTodo()
+    props.addTodo(props.form.name)
   }
   const toggleShouldShow = () => {
 
