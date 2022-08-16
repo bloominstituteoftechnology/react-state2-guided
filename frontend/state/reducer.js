@@ -31,8 +31,9 @@ function todos(todos = initialTodos, action) {
       const id = action.payload
       return todos.map(td => {
         if (id === td.id) {
-          
+          return { ...td, completed: !td.completed }
         }
+        return td
       })
     }
     default:
