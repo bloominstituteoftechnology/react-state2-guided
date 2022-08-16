@@ -39,7 +39,8 @@ function App(props) {
 
 // export default App
 // this is how we 'connect' a component to Redux
-export default connect(st => st)(App)
-// export default connect(st => ({
+export default connect(st => st)(App) // this brings ALL the states
+// export default connect(st => ({ // this brings ONLY todos
 //   todos: st.todos,
+//   
 // }))(App)
