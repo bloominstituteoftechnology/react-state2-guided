@@ -10,7 +10,7 @@ function form(state = initialForm, action) {
       return { ...state, [name]: value }
     }
     case types.ADD_NEW_TODO:
-      return 
+      return initialForm
     default:
       return state
   }
