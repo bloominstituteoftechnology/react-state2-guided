@@ -34,7 +34,9 @@ function todos(todos = initialTodos, action) {
 
 function displayCompleteds(state = true, action) {
   switch(action.type) {
-    case types
+    case types.TOGGLE_DISPLAY_COMPLETEDS: {
+      
+    }
   }
 }
 
